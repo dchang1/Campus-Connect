@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="update.js">
+</script>
+<link type="text/css" rel="stylesheet" href="index.css"/>
+</head>
+<center><body>
+
+<form action="results.html" method="post" onSubmit="update();">
+  <input id="field" placeholder = "Enter your field...." list="fields" name="field">
+  <datalist id="fields">
+    <option value="Unspecified">
+    <option value="Engineering">
+    <option value="Computer Science">
+    <option value="Psychology">
+    <option value="Economics">
+    <option value="Law">
+  </datalist>
+  <input id="GPA" placeholder = "Enter your GPA...." list="GPAs" name="GPA">
+  <datalist id="GPAs">
+    <option value="Unspecified">
+    <option value="1.0">
+    <option value="2.0">
+    <option value="3.0">
+    <option value="4.0">
+  </datalist>  
+  <input id="location" placeholder = "Enter location...." list="locations" name="location">
+  <datalist id="locations">
+    <option value="Unspecified">
+    <option value="California">
+    <option value="New York">
+    <option value="Virginia Beach">
+    <option value="Hawaii">
+  </datalist>
+  <input class="button" type="submit" value="Find your Internships!"></input>
+</form>
+
+<p>Here are the internships that you match with</p>
+<script src="search.js"></script>
+</body></center>
+</html>
