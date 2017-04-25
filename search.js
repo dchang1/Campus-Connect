@@ -6,7 +6,7 @@ var links=["https://www.facebook.com/careers/jobs/a0I1200000IAGYKEA5/?q=software
 var results=[];
 var j=0;
 
-if (localStorage.getItem("location")=="" || localStorage.getItem("location")=="Unspecified") {
+if (localStorage.getItem("location")=="Unspecified") {
 for (i=0; i<internships.length; i++) {
    if (localStorage.getItem("field")==internships[i][1] && localStorage.getItem("GPA")>=internships[i][2]) {
      results.push(internships[i][0]);
@@ -20,7 +20,7 @@ else {
 for (i=0; i<internships.length; i++) {
    if (localStorage.getItem("field")==internships[i][1] && localStorage.getItem("GPA")<=internships[i][2] && localStorage.getItem("location")==internships[i][3]) {
      results.push(internships[i][0]);
-     document.write(results[j].link(links[i])+"<br>");   
+     document.write(results[j].link(links[i])+"<br>");
      j++;
 }
 }
