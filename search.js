@@ -172,7 +172,7 @@ else if (localStorage.getItem("field")=="Unspecified" && localStorage.getItem("G
 }
 else {
   for (i=0; i<internships.length; i++) {
-    if (localStorage.getItem("field")==internships[i][1] && localStorage.getItem("GPA")<=internships[i][2] && localStorage.getItem("location")==internships[i][3] && localStorage.getItem("pay")==internships[i][4]) {
+    if (localStorage.getItem("field")==internships[i][1] && localStorage.getItem("GPA")>=internships[i][2] && localStorage.getItem("location")==internships[i][3] && localStorage.getItem("pay")==internships[i][4]) {
       results.push(internships[i][0]);
       descriptions.push(internships[i][5]);
       date.push(internships[i][6]);
