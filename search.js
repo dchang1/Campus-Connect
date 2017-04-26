@@ -161,7 +161,7 @@ else if (localStorage.getItem("GPA")=="Unspecified" && localStorage.getItem("loc
     }
   }
 }
-else if (localStorage.getItem("field")=="Unspecified" && localStorage.getItem("GPA")=="Unspecified" && localStorage.getItem("location")=="Unspecified" && localStorage.getItem("pay")=="Unspecified") {
+else if ((localStorage.getItem("field")=="Unspecified") && (localStorage.getItem("GPA")=="Unspecified") && (localStorage.getItem("location")=="Unspecified") && (localStorage.getItem("pay")=="Unspecified")) {
   for (i=0; i<internships.length; i++) {
     results.push(internships[i][0]);
     descriptions.push(internships[i][5]);
