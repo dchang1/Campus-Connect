@@ -31,13 +31,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-	var field = ["Enter your field...", "Unspecified", "Engineering", "Computer Science", "Psychology", "Economics", "Law"];
+	var field = ["Enter your field...", "Unspecified", "Ancient History", "Anthropology", "Arabic", "Art", "Art History", "Asian Studies", "Astronomy", "Biochemistry", "Biology", "Black Studies", "Chemistry", "Chinese", "Classics", "Cognitive Science", "Comparative Literature", "Computer Science", "Dance", "Economics", "Educational Studies", "Engineering", "English Literature", "Environmental Studies", "Film & Media Studies", "French & Francophone Studies", "Gender & Sexuality Studies", "German Studies", "Greek", "History", "Interpretation Theory", "Islamic Studies", "Japanese", "Latin", "Latin American & Latino Studies", "Linguistics", "Mathematics", "Medieval Studies", "Modern Languages & Literatures", "Music", "Peace & Conflict Studies", "Philosophy", "Physics", "Political Science", "Psychology", "Religion", "Russian", "Sociology", "Spanish", "Statistics", "Theater", "Other"];
 	var GPA = ["Enter your GPA...", "Unspecified", "4.0", "3.5", "3.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0"];
-	var location = ["Enter your location...", "Unspecified", "California", "New York", "Virginia Beach", "Hawaii"];
+	var location = ["Enter your location...", "Unspecified", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Verginia", "Wisconsin", "Wyoming"];
+	var year = ["Enter your class...", "Unspecified", "Freshman", "Sophomore", "Junior", "Senior", "Bachelor's Degree", "Master's Degree", "Doctorate's Degree"];
 	var pay = ["Paid or Unpaid", "Unspecified", "Paid", "Unpaid"];
 	$("#field").select2({data: field});
 	$("#GPA").select2({data: GPA});
 	$("#location").select2({data: location});
+	$("#year").select2({data: year});
 	$("#pay").select2({data: pay});
 });
 </script>
@@ -100,7 +102,7 @@
 		<div class="main-container">
 			<header class="page-header">
 				<div class="background-image-holder parallax-background">
-					<img class="background-image" alt="Background Image" src="img/hero20.jpg">
+					<img alt="Background Image" src="background3.jpg" style="width:100%;height:100%;">
 				</div>
 				
 				<div class="container">
@@ -108,10 +110,11 @@
 						<div class="col-sm-12 text-center">
 <h1 class="text-white space-bottom-medium">Search Again!</h1>
 <form class="text-white space-bottom-medium" action="results.html" method="get" onSubmit="update();">
-  <select id="field" data-placeholder = "Enter your field..." name="field" style="width:15vw;"></select>
-  <select id="GPA" placeholder = "Enter your GPA..." name="GPA" style="width:15vw;"></select>
-  <select id="location" placeholder = "Enter location..." name="location" style="width:15vw;"></select>
-  <select id="pay" placeholder = "Paid or Unpaid" name="pay" style="width:15vw;"></select>
+  <select id="field" data-placeholder = "Enter your field..." name="field" style="width:12vw;"></select>
+  <select id="GPA" placeholder = "Enter your GPA..." name="GPA" style="width:12vw;"></select>
+  <select id="location" placeholder = "Enter location..." name="location" style="width:12vw;"></select>
+  <select id="year" placeholder = "Enter class year..." name="year" style="width:12vw;"></select>
+  <select id="pay" placeholder = "Paid or Unpaid" name="pay" style="width:12vw;"></select>
   <input class="btn btn-primary btn-filled" type="submit" value="Match me!"></input>
 </form>
 						</div>
@@ -135,27 +138,31 @@
 				</div>
 			</section>
 <br>
-		<section class="feature-selector">
-			<div class="container" id="about">
+		<section class="feature-selector" id="about">
+			<div class="container">
 					<ul class="selector-content">
 						<li class="clearfix active">
 							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h1>About Us</h1>
+								<div class="col-sm-12 text-center" style="margin-bottom:-35px;">
+									<h1>Why use CampusConnect?</h1>
 								</div>
+									<p class="lead" align="center">
+										We're glad you asked. After talking to students, many informed us that current avenues of finding internships aren't user friendly, fail to properly screen opportunities, and prevent students from building relationships with companies. We hope to do just that.</p>
+							
+						<img src="items.png">
 							</div><!--end of row-->
 							
 							
 								<div class="col-sm-6">
 									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+										Attempting to balance academics, extracurricular activities, and sleep is hard, especially as a student at Swarthmore. On top of everything you already have to do, you're expected to find internships, which are now an essential part of finding a job after college. It's hard. Trust us, we get it - that's why we created CampusConnect.
 									</p>
-							</div>
-							<div class="col-sm-6">
+								</div>
+								<div class="col-sm-6">
 									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+										No one has time to spend pouring over the 7th page of a Google search, desperately searching for a meaningful internship opportunity. But don't worry, we're here to help. Additionally, we will provide each user with a mentor to guide them through every step of the application process, from reviewing resumes to conducting practice interviews.
 									</p>	
-							</div>
+								</div>
 						</li><!--end of individual feature content-->
 					</ul>
 				</div>
@@ -167,17 +174,17 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
-							<h1 class="space-bottom-medium">Pivot is an effortlessly simple startup template with usable features.</h1>
+							<h1 class="space-bottom-medium">CampusConnect is a great way to get a head start in the real world.</h1>
 							<p class="lead space-bottom-medium">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-							</p>
-							<a href="#" class="btn btn-primary">See Features</a>
-							<a href="#" class="btn btn-primary btn-text-only">Learn More</a>
+								Our accurate, comprehensive, and user-friendly search engine matches students with job and internship opportunities based on a series of user-generated inputs, such as desired location and pay. Our detailed screening processes ensure that opportunities listed on CampusConnect are legitimate and provide value.
+</p>
+							<a href="index.html" class="btn btn-primary">Get Started</a>
+							<a href="input.html" class="btn btn-primary btn-text-only">Post an Internship</a>
 						</div>
 						
 						<div class="col-md-6 col-sm-12">
-							<div class="inline-video-wrapper">
-								<img alt="smile" src="smile.png">
+							<div class="inline-video-wrapper"><br>	
+								<img alt="smile" src="completelogo.png">
 							</div>
 						</div>
 					</div><!--end of row-->
@@ -192,7 +199,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<span class="text-white">Campus-Connect</span>
+							<img src="minilogo.png" style="width:17px; height:17px"/><span class="text-white">&nbsp&nbspCampus-Connect</span>
 							<span class="text-white">spark7@swarthmore.edu</span>
 							<span class="text-white">1-999-999-9999</span>
 							<span class="text-white">500 College Avenue</span>
@@ -219,4 +226,3 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
-				
